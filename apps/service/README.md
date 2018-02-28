@@ -1,6 +1,8 @@
 # Service
 
-**TODO: Add description**
+The Service app manages communication and state machine for telephony integration
+
+Proxy: Communicates with Kamailio over RPC and configures via Ecto
 
 ## Installation
 

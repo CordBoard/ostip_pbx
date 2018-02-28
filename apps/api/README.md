@@ -1,5 +1,7 @@
 # Api
 
+Exposes REST API and Swagger docs for external integration. Locks outside functionality.
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
