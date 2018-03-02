@@ -13,14 +13,22 @@ defmodule ApiWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", ApiWeb do
-    pipe_through :browser # Use the default browser stack
-
-    get "/", PageController, :index
+  scope "/pbx/v1/clicktocall", ApiWeb do
+    pipe_through :api
+    get "/pbx/v1/clicktocall", ClickToCallController, :index
   end
 
   # Other scopes may use custom stacks.
   # scope "/api", ApiWeb do
   #   pipe_through :api
   # end
+  def swagger_info do
+    %{    
+      info: %{
+        version: "1.0",
+        title: "OSTIP PBX API"
+        #host: "where-our-app.is.hosted"
+      }
+    }
+  end
 end
