@@ -1,7 +1,7 @@
 defmodule ApiWeb.ClickToCallController do
   use ApiWeb, :controller
 
-  alias Dal.{Repo, Call}
+  alias Dal.PBX.{Repo, Call}
 
 
   def index(conn, _params) do
